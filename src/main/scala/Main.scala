@@ -2,11 +2,12 @@ import scala.annotation.tailrec
 
 object Main {
 
-  def series(n: Int): Int = {
+  @tailrec
+  def series(n: Int, acc: Int): Int = {
     if (n == 0) {
-      0
+      acc
     } else {
-      series(n - 1) + n
+      series(n - 1, acc + n)
     }
   }
 }
