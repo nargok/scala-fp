@@ -10,4 +10,7 @@ object Main {
       series(n - 1, acc + n)
     }
   }
+
+  @tailrec
+  def fact(n: Int): Int = if (n <= 1) 1 else fact(n - 1) * n
 }
