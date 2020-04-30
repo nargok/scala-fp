@@ -15,5 +15,5 @@ object Main {
   def fact(n: Int, acc: Int): Int = if (n <= 1) acc else fact(n - 1, acc * n)
 
 //  def twice(f: Int => Int): Int => Int = (x) => f(f(x))
-  def twice(f: Int => Int): Int => Int = f.compose(f)
+  def twice(f: Int => Int): Int => Int = f.compose(f) // compose2つの関数を組み合わせてひとつにする
 }
