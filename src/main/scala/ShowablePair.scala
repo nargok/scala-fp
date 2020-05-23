@@ -14,20 +14,20 @@ class StringShow(str: String) extends Show {
   override def show: String = str
 }
 
-val s = new ShowablePair[StringShow, StringShow](new StringShow("a"), new StringShow("b"))
-s.show // return -> (a,b)
+//val s = new ShowablePair[StringShow, StringShow](new StringShow("a"), new StringShow("b"))
+//s.show // return -> (a,b)
 
 /* -------------------------------------------------------------------- */
 
 // これはだめ
-class IntShow(i: Int) { def show: String = i.toString }
+//class IntShow(i: Int) { def show: String = i.toString }
 
-new ShowablePair[IntShow, IntShow](new IntShow(1), new IntShow(2))
+//new ShowablePair[IntShow, IntShow](new IntShow(1), new IntShow(2))
 
 /* -------------------------------------------------------------------- */
 
 // Showを継承すればOK
-class IntShow2(i: Int) extends Show { def show: String = i.toString }
+//class IntShow2(i: Int) extends Show { def show: String = i.toString }
 
-new ShowablePair[IntShow2, IntShow2](new IntShow2(1), new IntShow2(2))
+//new ShowablePair[IntShow2, IntShow2](new IntShow2(1), new IntShow2(2))
 
